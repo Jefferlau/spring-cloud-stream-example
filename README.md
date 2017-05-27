@@ -12,9 +12,9 @@ Spring Cloud Stream 是一个构建消息驱动的微服务框架。 Spring Clou
 
 本例的生产者即是消息发送方，其使用比较简单一是添加``@EnableBinding({MessageSource.class})``注解，二是配置文件配置消息中间件，三是消息发送类组件。
 
-``@EnableBinding``注解比较简单，直接看``Starter``即可，不再细说。
+``@EnableBinding``注解比较简单，直接看[``Starter``](https://github.com/Jefferlau/spring-cloud-stream-example/blob/master/spring-cloud-stream-producer/src/main/java/me/jefferlau/Starter.java)即可，不再细说。
 
-先看配置文件的代码片段：
+先看[配置文件](https://github.com/Jefferlau/spring-cloud-stream-example/blob/master/spring-cloud-stream-producer/src/main/resources/application.yml)的代码片段：
 
 ```yaml
 producer_channel:
@@ -32,9 +32,9 @@ contentType 这是定义使用 JSON 格式传递数据，默认是序列化对�
 
 本例的消费者即是消息接收方，其使用也比较简单一是添加``@EnableBinding({MessageSink.class})``注解，二是配置文件配置消息中间件，三是``@StreamListener``注解的方法接收消息。
 
-``@EnableBinding``注解比较简单，直接看``Starter``即可，不再细说。
+``@EnableBinding``注解比较简单，直接看[``Starter``](https://github.com/Jefferlau/spring-cloud-stream-example/blob/master/spring-cloud-stream-consumer/src/main/java/me/jefferlau/Starter.java)即可，不再细说。
 
-先看配置文件的代码片段：
+先看[配置文件](https://github.com/Jefferlau/spring-cloud-stream-example/blob/master/spring-cloud-stream-consumer/src/main/resources/application.yml)的代码片段：
 
 ```yaml
 consumer_channel:
