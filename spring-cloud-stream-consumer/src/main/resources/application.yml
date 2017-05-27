@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: Spring Cloud Stream Consumer Example
+  profiles:
+     active: development
+
+---
+debug: true
+
+logging:
+  file: logs/spring-cloud-stream-consumer.log
+  level:
+    org.springframework: info
+    org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer: info
+    me.jefferlau: trace
+
+spring:
+  profiles: development
+  cloud:
+    stream:
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      bindings:
+        consumer_channel:
+          group: consumer
+          destination: dest.exchange
+          contentType: application/json
+          binder: rabbit1
+
+server:
+  port: 8091
+  tomcat:
+    uri-encoding: UTF-8
+
+
