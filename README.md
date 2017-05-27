@@ -31,7 +31,7 @@ contentType 这是定义使用 JSON 格式传递数据，默认是序列化对�
 
 # 消费者
 
-本例的消费者即是消息接收方，其使用也比较简单一是添加``@EnableBinding({MessageSource.class})``注解，二是配置文件配置消息中间件，三是``@StreamListener``注解的方法接收消息。
+本例的消费者即是消息接收方，其使用也比较简单一是添加``@EnableBinding({MessageSink.class})``注解，二是配置文件配置消息中间件，三是``@StreamListener``注解的方法接收消息。
 
 ``@EnableBinding``注解比较简单，直接看``Starter``即可，不再细说。
 
