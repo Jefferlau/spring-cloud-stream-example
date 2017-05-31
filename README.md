@@ -48,3 +48,8 @@ consumer_channel:
 其他参数与生产者相同。
 
 只有消息接收，只要``@Component``的方法注解``@StreamListener``参数是和``@EnableBinding``相同的接口，此方法即可接收到订阅的消息。详见[``MessageConsumer``](https://github.com/Jefferlau/spring-cloud-stream-example/blob/master/spring-cloud-stream-consumer/src/main/java/me/jefferlau/message/MessageConsumer.java)。
+
+# 参考资料
+[Spring Cloud Stream Reference Guide](http://docs.spring.io/spring-cloud-stream/docs/current-SNAPSHOT/reference/htmlsingle/#_main_concepts)
+[中文翻译](http://blog.csdn.net/phyllisy/article/details/51352868)
+[Spring Cloud Stream Kafka](http://weifuwu.io/2016/09/15/dive-into-spring-cloud-stream/)
